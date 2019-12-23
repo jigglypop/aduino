@@ -1,15 +1,10 @@
-int led =12;
-
 void setup() {
   // put your setup code here, to run once:
-  pinMode(led,OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  digitalWrite(led,HIGH);
-  delay(10000);
-  digitalWrite(led,LOW);
-  delay(10000);
-
+  Serial.println((1023-analogRead(A0))/1023.0*10000.0);
+  delay(1000);
 }
