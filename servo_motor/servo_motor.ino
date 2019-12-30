@@ -6,7 +6,7 @@ void setup() {
 }
 
 void loop() {
-  for(int position=0;position < 180;position +=2){
+  for(int position=0;position < 180;position +=20){
     motor1.write(position);
     delay(20);  
   }
